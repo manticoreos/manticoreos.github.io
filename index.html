@@ -74,7 +74,7 @@
             <li>Process scheduling (no kernel threads)</li>
             <li>Hardware resource partitioning</li>
             <li>Virtual memory (no demand paging)</li>
-            <li>Kernel-bypass by default</li>
+	    <li>User-level network stack and socket interface with IPv4/UDP support</li>
             <li>Non-blocking OS system calls</li>
             <li>ELF executable support</li>
           </ul>
@@ -87,15 +87,16 @@
         <p>
           <ul>
             <li><s>Phase 0: kernel bootstrap, memory management, interrupts, etc. on Intel x86 platform with KVM/QEMU</s> (done)</li>
-            <li>Phase 1: UDP/IPv4 userspace network stack and VirtIO network device driver, and UDP echo server (<i>ongoing</i>)</li>
-            <li>Phase 2: multicore support on Intel x86 platform</li>
-            <li>Phase 3: hardware NIC driver (<i>e.g.,</i> for <a href="https://www.intel.com/content/dam/www/public/us/en/documents/datasheets/82599-10-gbe-controller-datasheet.pdf">Intel 82599</a>) with PCI device assignment under KVM/QEMU</li>
+	    <li><s>Phase 1: UDP/IPv4 userspace network stack and VirtIO network device driver, and UDP echo server (done)</s></li>
+            <li>Phase 2: packet buffer management, virtual memory, and high-speed I/O interfaces (<i>ongoing</i>)</li>
+            <li>Phase 3: multicore support on Intel x86 platform</li>
+            <li>Phase 4: hardware NIC driver (<i>e.g.,</i> for <a href="https://www.intel.com/content/dam/www/public/us/en/documents/datasheets/82599-10-gbe-controller-datasheet.pdf">Intel 82599</a>) with PCI device assignment under KVM/QEMU</li>
             <li>...</li>
             <li>Phase <i>N</i>: managed runtime support (<i>e.g.,</i> <a href="https://nodejs.org">Node.js</a> or <a href="https://wasmer.io/">Wasmer</a>)</li>
           </ul>
         </p>
         <p>
-          <i>(There are also plans to port Manticore to the RISC-V and ARM64 machine architectures &mdash; volunteers are welcome!)</i>
+          <i>There are also plans to port Manticore to the RISC-V and ARM64 machine architectures &mdash; volunteers are welcome!</i>
         </p>
 
         <h2 id="publications">Publications</h2>
@@ -115,8 +116,8 @@
     <hr>
     <footer class="section section-footer">
       <div class="docs-footer container grid-lg" id="copyright">
-        <p>&copy; 2019 Pekka Enberg &lt;<a href="mailto:penberg@iki.fi">penberg@iki.fi</a>&gt;</p>
-        <p>Last updated on December 29, 2019<p>
+        <p>&copy; 2019-2020 Pekka Enberg &lt;<a href="mailto:penberg@iki.fi">penberg@iki.fi</a>&gt;</p>
+        <p>Last updated on June 07, 2020</p>
       </div>
     </footer>
 </body>
